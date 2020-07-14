@@ -1,0 +1,21 @@
+ID: Demo_1
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: DB_1
+   type: hdb
+   path: DB_1
+   requires:
+    - name: hdi_DB_1
+
+
+ - name: Web
+   type: html5
+   path: Web
+
+resources:
+ - name: hdi_DB_1
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
